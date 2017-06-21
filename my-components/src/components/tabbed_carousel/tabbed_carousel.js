@@ -23,7 +23,7 @@ class Tabs extends React.Component {
 
   componentDidUpdate(prevProps, prevState)
   {
-    if (prevState.isPlaying != this.state.isPlaying)
+    if (prevState.isPlaying !== this.state.isPlaying)
     {
       this.checkIsPlaying();
     }

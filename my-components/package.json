@@ -2,6 +2,7 @@
   "name": "my-components",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://aandy28.github.io/react_components",
   "dependencies": {
     "axios": "^0.16.2",
     "eslint-plugin-react": "^7.1.0",

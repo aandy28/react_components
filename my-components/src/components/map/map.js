@@ -7,7 +7,6 @@ import cluster_2 from './2.png';
 import cluster_3 from './3.png';
 import marker_img from './marker.png';
 import custom_helper from "../helpers/helpers.js";
-import allBranches from '../map/branches.json';
 import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 import MarkerClusterer from "react-google-maps/lib/addons/MarkerClusterer";
 import './map.css';
@@ -88,11 +87,11 @@ class Map extends React.Component {
   componentDidMount() {
     var field = 'q';
     var url = window.location.href;
-    if(url.indexOf('?' + field + '=') != -1)
+    if(url.indexOf('?' + field + '=') !== -1)
     {
       this.handleQueryString(url);
     }  
-    else if(url.indexOf('&' + field + '=') != -1)
+    else if(url.indexOf('&' + field + '=') !== -1)
     {
       this.handleQueryString(url);
     }else{
@@ -218,6 +217,7 @@ class Map extends React.Component {
           if (branch.longitude) {
             branches.push(branch);
           }
+          return branches;
         });
         this.setState({
           loading: false,
@@ -232,11 +232,6 @@ class Map extends React.Component {
 
   render() {
 
-    let error = this.state.error_message
-      ? <div className="error_message">
-          <i className="material-icons">warning</i> {this.state.error_message}
-        </div>
-      : "";
     let summary = this.state.branches.length > 0
       ? <div className="summary">
           Found <strong>{this.state.branches.length}</strong> branche(s)
@@ -259,7 +254,7 @@ class Map extends React.Component {
       let filteredBranches = this.state.branches.filter(
         (branch) => {
 
-          return this.state.marker_Branch != "" ? branch.id === this.state.marker_Branch : branch
+          return this.state.marker_Branch !== "" ? branch.id === this.state.marker_Branch : branch
           
           //return branch.id.toString().indexOf(this.state.marker_Branch.toString()) !== -1;
         }

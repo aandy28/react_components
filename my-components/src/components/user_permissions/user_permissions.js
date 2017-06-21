@@ -18,9 +18,13 @@ class UserPermissions extends React.Component
   }
 
   componentWillMount() {
+    // eslint-disable-next-line
     this.props.user_permissions.allow_punchout ? this.setState({allow_punchout: this.props.user_permissions.allow_punchout}) : null
+    // eslint-disable-next-line
     this.props.user_permissions.allow_user_management ? this.setState({allow_user_management: this.props.user_permissions.allow_user_management}) : null
+    // eslint-disable-next-line
     this.props.user_permissions.can_request_quote ? this.setState({can_request_quote: this.props.user_permissions.can_request_quote}) : null
+    // eslint-disable-next-line
     this.props.user_permissions.can_see_prices ? this.setState({can_see_prices: this.props.user_permissions.can_see_prices}) : null
   }
 

@@ -9,6 +9,7 @@ function getAllBranches(){
       if (branch.longitude) {
         branches.push(branch);
       }
+      return branches;
     });
 
   return {branches: branches };
