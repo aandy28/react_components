@@ -1,0 +1,28 @@
+.permissions-list {
+  margin-top: 20px;
+}
+.permissions-list .form-check {
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid grey;
+}
+.permissions-list .form-check-label {
+  padding: 0 0px 0 0;
+  width: 100%;
+  font-size: 14px;
+}
+.permissions-list i {
+  margin-right: 10px;
+  border-radius: 50%;
+  font-size: 0.625rem;
+  background-color: blue;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+.permissions-list .form-check-input {
+  float: right;
+  position: static;
+  margin: 5px 0 0 0;
+}
